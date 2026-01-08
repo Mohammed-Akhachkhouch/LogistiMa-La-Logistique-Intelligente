@@ -14,7 +14,7 @@ export async function getZone(name) {
     return JSON.parse(cached);
   }
 
-  console.log("🐘 zone from DB");
+  console.log(" zone from DB");
   const zone = zonesFromDB[name];
   if (!zone) return null;
 
