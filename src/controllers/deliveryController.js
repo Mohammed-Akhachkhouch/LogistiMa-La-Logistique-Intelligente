@@ -1,6 +1,6 @@
 import { Delivery } from "../models/delivery.js";
-import { assignCourier } from "../services/dispatcher.service.js";
-import { deliveryQueue } from "../queues/delivery.queue.js";
+import { assignCourier } from "../services/dispatcherService.js";
+import { deliveryQueue } from "../queues/deliveryQueue.js";
 
 export async function createDelivery(req, res) {
   try {

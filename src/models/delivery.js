@@ -1,6 +1,6 @@
 // src/models/Delivery.js
 import { DataTypes, Model } from "sequelize";
-import { sequelize } from "../config/database.js";
+import { sequelize } from "../config/db.js";
 import { Courier } from "./courier.js";
 
 export class Delivery extends Model {}
