@@ -1,7 +1,6 @@
-// src/queues/delivery.queue.js
-import { Queue } from "bullmq";
-import { redis } from "../config/redis.js";
-
-export const deliveryQueue = new Queue("delivery", {
-  connection: redis
-});
+// Mock queue for development (Redis disabled)
+export const deliveryQueue = {
+  add: async (name, data) => {
+    console.log("Mock queue - would process:", name, data);
+  }
+};

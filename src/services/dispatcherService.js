@@ -1,12 +1,13 @@
-import { sequelize } from "../config/database.js";
+import { sequelize } from "../config/db.js";
 import { Courier } from "../models/courier.js";
+import { Op } from "sequelize";
 
 export async function assignCourier() {
   return sequelize.transaction(async (t) => {
     const courier = await Courier.findOne({
       where: {
         capacity: {
-          [sequelize.Sequelize.Op.gt]: 0
+          [Op.gt]: 0
         }
       },
       lock: t.LOCK.UPDATE,
